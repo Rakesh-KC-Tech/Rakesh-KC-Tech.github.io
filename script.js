@@ -22,7 +22,7 @@ document.querySelectorAll("#sideNav a, .profile-name a").forEach((a) =>
 );
 
 // Typing effect
-const words = ["Web Developer", "Full-Stack Developer", "CS Student", "Security Learner"];
+const words = ["Full-Stack Web Developer", "Next.js & Supabase Developer", "Computer Science Student"];
 const typed = document.getElementById("typed");
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 if (reduceMotion) {
@@ -40,7 +40,13 @@ if (reduceMotion) {
   })();
 }
 
-// Reveal on scroll (also animates skill bars)
+// Download CV: prints the page with the print stylesheet (choose "Save as PDF")
+document.getElementById("downloadCv").addEventListener("click", () => {
+  document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
+  window.print();
+});
+
+// Reveal on scroll
 const revealObserver = new IntersectionObserver(
   (entries) => entries.forEach((e) => {
     if (e.isIntersecting) {

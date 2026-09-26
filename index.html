@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rakesh KC — Web Developer</title>
-  <meta name="description" content="Rakesh KC — Web developer and Computer Science student at Dallas College building full-stack apps with Next.js and Supabase." />
+  <title>Rakesh KC — Full-Stack Web Developer</title>
+  <meta name="description" content="Rakesh KC — Full-stack web developer and Computer Science student at Dallas College building secure web apps with Next.js, Supabase, and PostgreSQL." />
+  <meta property="og:title" content="Rakesh KC — Full-Stack Web Developer" />
+  <meta property="og:description" content="Full-stack web developer building secure web apps with Next.js, Supabase, and PostgreSQL." />
+  <meta property="og:url" content="https://rakesh-kc-tech.github.io/" />
+  <meta property="og:image" content="https://github.com/Rakesh-KC-Tech.png?size=400" />
+  <meta property="og:type" content="profile" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b82f6'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3ERK%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -23,7 +29,7 @@
     <div class="profile">
       <img src="https://github.com/Rakesh-KC-Tech.png?size=300" alt="Rakesh KC" class="profile-img" />
       <h1 class="profile-name"><a href="#home">Rakesh KC</a></h1>
-      <p class="profile-role">Web Developer</p>
+      <p class="profile-role">Full-Stack Web Developer</p>
       <div class="social">
         <a href="https://www.linkedin.com/in/rakesh-kc-671b96307/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/Rakesh-KC-Tech" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
@@ -40,9 +46,12 @@
       <a href="#contact"><i class="bi bi-envelope"></i>Contact</a>
     </nav>
 
-    <button class="theme-btn" id="themeToggle" aria-label="Toggle light and dark mode">
-      <i class="bi bi-sun"></i><i class="bi bi-moon-stars"></i><span>Theme</span>
-    </button>
+    <div class="side-actions">
+      <button class="cv-btn" id="downloadCv"><i class="bi bi-download"></i>Download CV</button>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle light and dark mode">
+        <i class="bi bi-sun"></i><i class="bi bi-moon-stars"></i>
+      </button>
+    </div>
   </aside>
 
   <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
@@ -52,9 +61,10 @@
     <section id="home" class="hero">
       <div class="hero-bg"></div>
       <div class="hero-content">
+        <p class="hero-kicker">Available for full-time roles &amp; internships</p>
         <h2>Hi, I'm <span class="accent">Rakesh KC</span></h2>
-        <p class="typed-line">I'm a <span class="typed" id="typed"></span><span class="cursor">|</span></p>
-        <p class="hero-sub">Computer Science student at Dallas College building secure, full-stack web apps.</p>
+        <p class="typed-line"><span class="typed" id="typed"></span><span class="cursor">|</span></p>
+        <p class="hero-sub">I design and build secure, production-ready web applications with Next.js, Supabase, and PostgreSQL.</p>
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">View my work</a>
           <a href="#contact" class="btn btn-outline">Contact me</a>
@@ -77,9 +87,9 @@
             <h3>Rakesh KC</h3>
             <p class="accent small">Full-Stack Web Developer</p>
             <div class="card-stats">
-              <div><strong>4+</strong><span>Years in CS</span></div>
-              <div><strong>2</strong><span>Live sites</span></div>
-              <div><strong>15+</strong><span>Skills</span></div>
+              <div><strong>4+</strong><span>Years of CS</span></div>
+              <div><strong>2</strong><span>Sites shipped</span></div>
+              <div><strong>1</strong><span>Client</span></div>
             </div>
             <a href="#contact" class="btn btn-primary btn-block"><i class="bi bi-envelope"></i> Contact</a>
           </div>
@@ -117,18 +127,27 @@
           <p>Technologies I use to design, build, and ship web applications.</p>
         </div>
 
-        <div class="skills-bars reveal">
-          <div class="bar"><div class="bar-head"><span>HTML &amp; CSS</span><span>90%</span></div><div class="track"><div class="fill" style="--w:90%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>React &amp; Next.js</span><span>80%</span></div><div class="track"><div class="fill" style="--w:80%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>JavaScript</span><span>85%</span></div><div class="track"><div class="fill" style="--w:85%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>Supabase &amp; PostgreSQL</span><span>75%</span></div><div class="track"><div class="fill" style="--w:75%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>TypeScript</span><span>75%</span></div><div class="track"><div class="fill" style="--w:75%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>Git, GitHub &amp; Vercel</span><span>80%</span></div><div class="track"><div class="fill" style="--w:80%"></div></div></div>
-        </div>
-
-        <div class="tag-groups reveal">
-          <div><h4><i class="bi bi-shield-lock"></i> Security</h4><ul class="tags"><li>Row Level Security</li><li>Authentication</li><li>Role-based access</li><li>Ethical hacking (learning)</li></ul></div>
-          <div><h4><i class="bi bi-tools"></i> Also</h4><ul class="tags"><li>SQL</li><li>Responsive design</li><li>Data entry</li><li>Typing</li></ul></div>
+        <div class="skill-cards">
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="bi bi-window"></i></div>
+            <h4>Frontend</h4>
+            <ul class="tags"><li>React</li><li>Next.js</li><li>TypeScript</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Responsive design</li></ul>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="bi bi-database"></i></div>
+            <h4>Backend &amp; Data</h4>
+            <ul class="tags"><li>Supabase</li><li>PostgreSQL</li><li>SQL</li><li>REST APIs</li><li>Authentication</li></ul>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="bi bi-shield-lock"></i></div>
+            <h4>Security</h4>
+            <ul class="tags"><li>Row Level Security</li><li>Role-based access control</li><li>Secure auth flows</li><li>Web app security (learning)</li></ul>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="bi bi-git"></i></div>
+            <h4>Tools &amp; Deployment</h4>
+            <ul class="tags"><li>Git</li><li>GitHub</li><li>Vercel</li><li>GitHub Pages</li><li>VS Code</li></ul>
+          </div>
         </div>
       </div>
     </section>
@@ -143,8 +162,8 @@
 
         <div class="resume-grid">
           <div class="reveal">
-            <h3 class="resume-title"><i class="bi bi-person-badge"></i> Summary</h3>
-            <div class="resume-item">
+            <h3 class="resume-title no-print"><i class="bi bi-person-badge"></i> Summary</h3>
+            <div class="resume-item no-print">
               <h4>Rakesh KC</h4>
               <p><em>Web developer and Computer Science student who builds full-stack web apps with Next.js,
                 Supabase, and PostgreSQL, with a growing focus on application security.</em></p>
@@ -195,25 +214,53 @@
           <p>Things I've designed and built.</p>
         </div>
 
-        <div class="projects-grid">
-          <article class="project reveal">
-            <div class="project-icon"><i class="bi bi-people"></i></div>
-            <h3>Irving Nepal FC Member Portal</h3>
-            <p>Full-stack app with member sign-in, membership management, and a role-based admin dashboard.</p>
-            <ul class="tags small"><li>Next.js 15</li><li>Supabase</li><li>PostgreSQL</li><li>RLS</li></ul>
-            <a href="https://irvingnepalfc.com" target="_blank" rel="noopener" class="project-link">Visit site <i class="bi bi-arrow-up-right"></i></a>
-          </article>
+        <article class="featured reveal">
+          <div class="featured-main">
+            <span class="badge">Featured project · Freelance</span>
+            <h3>Irving Nepal FC: Club Website &amp; Member Portal</h3>
+            <p>
+              A complete digital platform for a Dallas–Fort Worth soccer club: a public website for fans and
+              new players, plus a secure member portal where club officials manage members and content.
+            </p>
+            <ul class="highlights">
+              <li><i class="bi bi-check2-circle"></i>Member authentication and membership management</li>
+              <li><i class="bi bi-check2-circle"></i>Role-based admin dashboard for club officials</li>
+              <li><i class="bi bi-check2-circle"></i>PostgreSQL Row Level Security protecting member data</li>
+              <li><i class="bi bi-check2-circle"></i>Deployed on Vercel with a custom domain</li>
+            </ul>
+            <ul class="tags small"><li>Next.js 15</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Vercel</li></ul>
+            <div class="featured-links">
+              <a href="https://irvingnepalfc.com" target="_blank" rel="noopener" class="btn btn-primary">Live site <i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://github.com/Rakesh-KC-Tech/irving-nepal-fc" target="_blank" rel="noopener" class="btn btn-ghost">Source code <i class="bi bi-github"></i></a>
+            </div>
+          </div>
+          <div class="featured-visual" aria-hidden="true">
+            <div class="mock">
+              <div class="mock-bar"><span></span><span></span><span></span><em>irvingnepalfc.com</em></div>
+              <div class="mock-body">
+                <div class="mock-side"><i></i><i></i><i></i><i></i></div>
+                <div class="mock-main">
+                  <div class="mock-row"><b></b><b></b><b></b></div>
+                  <div class="mock-chart"></div>
+                  <div class="mock-lines"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="projects-grid two no-print">
           <article class="project reveal">
             <div class="project-icon"><i class="bi bi-trophy"></i></div>
             <h3>Irving Nepal FC Club Website</h3>
-            <p>Public-facing website introducing the club and helping new players and fans get involved.</p>
+            <p>Static public site introducing the club, its team, and fixtures, and helping new players and fans get involved.</p>
             <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
             <a href="https://github.com/Rakesh-KC-Tech/irving-nepal-fc-website" target="_blank" rel="noopener" class="project-link">View code <i class="bi bi-arrow-up-right"></i></a>
           </article>
           <article class="project reveal">
             <div class="project-icon"><i class="bi bi-person-workspace"></i></div>
             <h3>Personal Portfolio</h3>
-            <p>This site: a responsive resume with light and dark themes, hosted on GitHub Pages.</p>
+            <p>This site: an accessible, responsive resume with light and dark themes and a printable CV, hosted on GitHub Pages.</p>
             <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
             <a href="https://github.com/Rakesh-KC-Tech/Rakesh-KC-Tech.github.io" target="_blank" rel="noopener" class="project-link">View code <i class="bi bi-arrow-up-right"></i></a>
           </article>
