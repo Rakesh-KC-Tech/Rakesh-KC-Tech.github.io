@@ -70,8 +70,42 @@ const sectionObserver = new IntersectionObserver(
 );
 document.querySelectorAll("main section[id]").forEach((s) => sectionObserver.observe(s));
 
-// Back-to-top button
+// Back-to-top button + reading progress bar
 const backTop = document.getElementById("backTop");
-addEventListener("scroll", () => backTop.classList.toggle("show", scrollY > 400), { passive: true });
+const progress = document.getElementById("progress");
+function onScroll() {
+  backTop.classList.toggle("show", scrollY > 400);
+  const max = document.documentElement.scrollHeight - innerHeight;
+  progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+}
+addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+
+// Spotlight that follows the cursor on cards
+document.querySelectorAll(".spot").forEach((card) =>
+  card.addEventListener("pointermove", (e) => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+    card.style.setProperty("--my", `${e.clientY - r.top}px`);
+  })
+);
+
+// Count numbers up when they scroll into view
+const countObserver = new IntersectionObserver(
+  (entries) => entries.forEach((e) => {
+    if (!e.isIntersecting) return;
+    countObserver.unobserve(e.target);
+    const el = e.target, to = +el.dataset.to;
+    if (reduceMotion) return;
+    const start = performance.now(), dur = 1200;
+    (function step(now) {
+      const t = Math.min((now - start) / dur, 1);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - t, 3)));
+      if (t < 1) requestAnimationFrame(step);
+    })(start);
+  }),
+  { threshold: 0.6 }
+);
+document.querySelectorAll(".count").forEach((el) => countObserver.observe(el));
 
 document.getElementById("year").textContent = new Date().getFullYear();

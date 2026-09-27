@@ -24,6 +24,8 @@
   </script>
 </head>
 <body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
   <!-- ===== Sidebar ===== -->
   <aside class="sidebar" id="sidebar">
     <div class="profile">
@@ -40,6 +42,7 @@
     <nav class="side-nav" id="sideNav">
       <a href="#home" class="active"><i class="bi bi-house"></i>Home</a>
       <a href="#about"><i class="bi bi-person"></i>About</a>
+      <a href="#services"><i class="bi bi-lightning-charge"></i>Services</a>
       <a href="#skills"><i class="bi bi-bar-chart"></i>Skills</a>
       <a href="#resume"><i class="bi bi-file-earmark-text"></i>Resume</a>
       <a href="#projects"><i class="bi bi-grid"></i>Projects</a>
@@ -60,17 +63,38 @@
     <!-- ===== Hero ===== -->
     <section id="home" class="hero">
       <div class="hero-bg"></div>
-      <div class="hero-content">
-        <p class="hero-kicker">Available for full-time roles &amp; internships</p>
-        <h2>Hi, I'm <span class="accent">Rakesh KC</span></h2>
-        <p class="typed-line"><span class="typed" id="typed"></span><span class="cursor">|</span></p>
-        <p class="hero-sub">I design and build secure, production-ready web applications with Next.js, Supabase, and PostgreSQL.</p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View my work</a>
-          <a href="#contact" class="btn btn-outline">Contact me</a>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-kicker">Available for full-time roles &amp; internships</p>
+          <h2>Hi, I'm <span class="accent">Rakesh KC</span></h2>
+          <p class="typed-line"><span class="typed" id="typed"></span><span class="cursor">|</span></p>
+          <p class="hero-sub">I design and build secure, production-ready web applications, from the database to the pixels, with Next.js, Supabase, and PostgreSQL.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">See my work <i class="bi bi-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-outline">Let's talk</a>
+          </div>
+        </div>
+
+        <div class="code-card" aria-label="Summary of Rakesh as a code snippet">
+          <div class="code-bar"><span></span><span></span><span></span><em>rakesh.ts</em></div>
+<pre><code><span class="k">const</span> <span class="v">rakesh</span> = {
+  <span class="p">role</span>: <span class="s">"Full-Stack Web Developer"</span>,
+  <span class="p">based</span>: <span class="s">"Dallas–Fort Worth, TX"</span>,
+  <span class="p">stack</span>: [<span class="s">"Next.js"</span>, <span class="s">"TypeScript"</span>, <span class="s">"Supabase"</span>, <span class="s">"PostgreSQL"</span>],
+  <span class="p">shipped</span>: [<span class="s">"irvingnepalfc.com"</span>, <span class="s">"member portal"</span>],
+  <span class="p">focus</span>: <span class="s">"secure, real-world web apps"</span>,
+  <span class="p">learning</span>: <span class="s">"application security"</span>,
+  <span class="p">openToWork</span>: <span class="b">true</span>,
+};</code></pre>
         </div>
       </div>
-      <a href="#about" class="scroll-down" aria-label="Scroll down"><i class="bi bi-chevron-double-down"></i></a>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Next.js</span><span>React</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span><span>Stripe</span><span>Vercel</span><span>Row Level Security</span><span>REST APIs</span><span>Git</span>
+          <span>Next.js</span><span>React</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span><span>Stripe</span><span>Vercel</span><span>Row Level Security</span><span>REST APIs</span><span>Git</span>
+        </div>
+      </div>
     </section>
 
     <!-- ===== About ===== -->
@@ -87,9 +111,9 @@
             <h3>Rakesh KC</h3>
             <p class="accent small">Full-Stack Web Developer</p>
             <div class="card-stats">
-              <div><strong>4+</strong><span>Years of CS</span></div>
-              <div><strong>2</strong><span>Sites shipped</span></div>
-              <div><strong>1</strong><span>Client</span></div>
+              <div><strong><span class="count" data-to="4">4</span>+</strong><span>Years of CS</span></div>
+              <div><strong><span class="count" data-to="2">2</span></strong><span>Sites shipped</span></div>
+              <div><strong><span class="count" data-to="56">56</span>+</strong><span>Club players</span></div>
             </div>
             <a href="#contact" class="btn btn-primary btn-block"><i class="bi bi-envelope"></i> Contact</a>
           </div>
@@ -119,8 +143,44 @@
       </div>
     </section>
 
+    <!-- ===== Services ===== -->
+    <section id="services" class="section alt no-print">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>What I do</h2>
+          <p>From first idea to a live, secure product.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service spot reveal">
+            <div class="service-icon"><i class="bi bi-layers"></i></div>
+            <h3>Full-stack web apps</h3>
+            <p>Complete applications with sign-in, dashboards, and databases, built with Next.js, TypeScript, and Supabase.</p>
+          </article>
+          <article class="service spot reveal">
+            <div class="service-icon"><i class="bi bi-shield-check"></i></div>
+            <h3>Secure backends</h3>
+            <p>PostgreSQL schemas with Row Level Security, role-based access, and audit trails, so the right people see the right data.</p>
+          </article>
+          <article class="service spot reveal">
+            <div class="service-icon"><i class="bi bi-shop"></i></div>
+            <h3>Websites for organizations</h3>
+            <p>Fast, mobile-friendly sites for clubs, nonprofits, and local businesses, with payments and integrations when needed.</p>
+          </article>
+        </div>
+
+        <h3 class="process-title reveal">How I work</h3>
+        <ol class="process reveal">
+          <li><span>01</span><h4>Discover</h4><p>Understand the people, the problem, and what success looks like.</p></li>
+          <li><span>02</span><h4>Design</h4><p>Plan the data model, user flows, and security rules before coding.</p></li>
+          <li><span>03</span><h4>Build</h4><p>Ship in small, testable steps with regular check-ins and feedback.</p></li>
+          <li><span>04</span><h4>Launch &amp; support</h4><p>Deploy, monitor, and keep improving after go-live.</p></li>
+        </ol>
+      </div>
+    </section>
+
     <!-- ===== Skills ===== -->
-    <section id="skills" class="section alt">
+    <section id="skills" class="section">
       <div class="container">
         <div class="section-title reveal">
           <h2>Skills</h2>
@@ -128,22 +188,22 @@
         </div>
 
         <div class="skill-cards">
-          <div class="skill-card reveal">
+          <div class="skill-card spot reveal">
             <div class="skill-icon"><i class="bi bi-window"></i></div>
             <h4>Frontend</h4>
             <ul class="tags"><li>React</li><li>Next.js</li><li>TypeScript</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Responsive design</li></ul>
           </div>
-          <div class="skill-card reveal">
+          <div class="skill-card spot reveal">
             <div class="skill-icon"><i class="bi bi-database"></i></div>
             <h4>Backend &amp; Data</h4>
-            <ul class="tags"><li>Supabase</li><li>PostgreSQL</li><li>SQL</li><li>REST APIs</li><li>Authentication</li></ul>
+            <ul class="tags"><li>Supabase</li><li>PostgreSQL</li><li>SQL</li><li>REST APIs</li><li>Stripe payments</li><li>Webhooks</li><li>Authentication</li></ul>
           </div>
-          <div class="skill-card reveal">
+          <div class="skill-card spot reveal">
             <div class="skill-icon"><i class="bi bi-shield-lock"></i></div>
             <h4>Security</h4>
             <ul class="tags"><li>Row Level Security</li><li>Role-based access control</li><li>Secure auth flows</li><li>Web app security (learning)</li></ul>
           </div>
-          <div class="skill-card reveal">
+          <div class="skill-card spot reveal">
             <div class="skill-icon"><i class="bi bi-git"></i></div>
             <h4>Tools &amp; Deployment</h4>
             <ul class="tags"><li>Git</li><li>GitHub</li><li>Vercel</li><li>GitHub Pages</li><li>VS Code</li></ul>
@@ -153,7 +213,7 @@
     </section>
 
     <!-- ===== Resume ===== -->
-    <section id="resume" class="section">
+    <section id="resume" class="section alt">
       <div class="container">
         <div class="section-title reveal">
           <h2>Resume</h2>
@@ -195,10 +255,11 @@
               <span class="date">Jan 2026 – Present</span>
               <p class="place">Irving Nepal FC · Freelance · Irving, TX</p>
               <ul>
-                <li>Designed and built the club's complete digital presence: a public website and a full-stack member portal.</li>
-                <li>Built authentication, membership management, and a role-based admin dashboard.</li>
-                <li>Developed with Next.js 15, TypeScript, Supabase, and PostgreSQL using Row Level Security.</li>
-                <li>Deployed on Vercel with a custom domain at irvingnepalfc.com.</li>
+                <li>Designed and built the club's complete digital presence: a public website and a full-stack member portal serving 56+ registered players.</li>
+                <li>Built member sign-up, membership plans, and Stripe-powered payments for dues and the club shop.</li>
+                <li>Created a role-based admin dashboard for members, teams, events, documents, news, and audit logs.</li>
+                <li>Secured member data with PostgreSQL Row Level Security; integrated the Clubverse and YouTube APIs and a daily automated news sync.</li>
+                <li>Stack: Next.js 15, TypeScript, Supabase, PostgreSQL, Stripe; deployed on Vercel and IONOS.</li>
               </ul>
             </div>
           </div>
@@ -207,7 +268,7 @@
     </section>
 
     <!-- ===== Projects ===== -->
-    <section id="projects" class="section alt">
+    <section id="projects" class="section">
       <div class="container">
         <div class="section-title reveal">
           <h2>Projects</h2>
@@ -216,22 +277,16 @@
 
         <article class="featured reveal">
           <div class="featured-main">
-            <span class="badge">Featured project · Freelance</span>
+            <span class="badge">Case study · Freelance</span>
             <h3>Irving Nepal FC: Club Website &amp; Member Portal</h3>
-            <p>
-              A complete digital platform for a Dallas–Fort Worth soccer club: a public website for fans and
-              new players, plus a secure member portal where club officials manage members and content.
-            </p>
-            <ul class="highlights">
-              <li><i class="bi bi-check2-circle"></i>Member authentication and membership management</li>
-              <li><i class="bi bi-check2-circle"></i>Role-based admin dashboard for club officials</li>
-              <li><i class="bi bi-check2-circle"></i>PostgreSQL Row Level Security protecting member data</li>
-              <li><i class="bi bi-check2-circle"></i>Deployed on Vercel with a custom domain</li>
-            </ul>
-            <ul class="tags small"><li>Next.js 15</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Vercel</li></ul>
+            <div class="case">
+              <div><h4><i class="bi bi-flag"></i> The challenge</h4><p>A growing community soccer club needed one place to handle player registration, payments, news, and member information.</p></div>
+              <div><h4><i class="bi bi-hammer"></i> What I built</h4><p>A public website for fans and new players, plus a secure member portal where officials run the whole club from one dashboard.</p></div>
+            </div>
+            <ul class="tags small"><li>Next.js 15</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Stripe</li><li>Vercel</li></ul>
             <div class="featured-links">
-              <a href="https://irvingnepalfc.com" target="_blank" rel="noopener" class="btn btn-primary">Live site <i class="bi bi-arrow-up-right"></i></a>
-              <a href="https://github.com/Rakesh-KC-Tech/irving-nepal-fc" target="_blank" rel="noopener" class="btn btn-ghost">Source code <i class="bi bi-github"></i></a>
+              <a href="https://irvingnepalfc.com" target="_blank" rel="noopener" class="btn btn-primary">Club website <i class="bi bi-arrow-up-right"></i></a>
+              <a href="https://portal.irvingnepalfc.com" target="_blank" rel="noopener" class="btn btn-ghost">Member portal <i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
           <div class="featured-visual" aria-hidden="true">
@@ -249,15 +304,34 @@
           </div>
         </article>
 
+        <div class="impact reveal">
+          <div><strong><span class="count" data-to="56">56</span>+</strong><span>Registered players</span></div>
+          <div><strong><span class="count" data-to="10">10</span></strong><span>Admin modules</span></div>
+          <div><strong><span class="count" data-to="3">3</span></strong><span>API integrations</span></div>
+          <div><strong>Daily</strong><span>Automated news sync</span></div>
+        </div>
+
+        <div class="feature-grid reveal">
+          <div class="feature spot"><i class="bi bi-person-check"></i><h4>Member accounts</h4><p>Sign-up, login, profiles, and registrations.</p></div>
+          <div class="feature spot"><i class="bi bi-credit-card"></i><h4>Stripe payments</h4><p>Membership plans and club shop checkout with webhooks.</p></div>
+          <div class="feature spot"><i class="bi bi-speedometer2"></i><h4>Admin dashboard</h4><p>Members, teams, events, plans, and payments in one place.</p></div>
+          <div class="feature spot"><i class="bi bi-shield-lock"></i><h4>Row Level Security</h4><p>Database rules so members only see their own data.</p></div>
+          <div class="feature spot"><i class="bi bi-journal-text"></i><h4>Audit logs</h4><p>A record of admin actions for accountability.</p></div>
+          <div class="feature spot"><i class="bi bi-newspaper"></i><h4>News &amp; announcements</h4><p>Articles, announcements, and a scheduled daily sync.</p></div>
+          <div class="feature spot"><i class="bi bi-calendar-event"></i><h4>Events &amp; documents</h4><p>Event pages and a shared document library.</p></div>
+          <div class="feature spot"><i class="bi bi-plug"></i><h4>Integrations</h4><p>Clubverse games, rosters, and tournaments; YouTube videos.</p></div>
+        </div>
+
+        <h3 class="more-title reveal">More projects</h3>
         <div class="projects-grid two no-print">
-          <article class="project reveal">
+          <article class="project spot reveal">
             <div class="project-icon"><i class="bi bi-trophy"></i></div>
             <h3>Irving Nepal FC Club Website</h3>
             <p>Static public site introducing the club, its team, and fixtures, and helping new players and fans get involved.</p>
             <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
             <a href="https://github.com/Rakesh-KC-Tech/irving-nepal-fc-website" target="_blank" rel="noopener" class="project-link">View code <i class="bi bi-arrow-up-right"></i></a>
           </article>
-          <article class="project reveal">
+          <article class="project spot reveal">
             <div class="project-icon"><i class="bi bi-person-workspace"></i></div>
             <h3>Personal Portfolio</h3>
             <p>This site: an accessible, responsive resume with light and dark themes and a printable CV, hosted on GitHub Pages.</p>
@@ -269,11 +343,15 @@
     </section>
 
     <!-- ===== Contact ===== -->
-    <section id="contact" class="section">
+    <section id="contact" class="section alt">
       <div class="container">
-        <div class="section-title reveal">
-          <h2>Contact</h2>
-          <p>Open to full-time roles, internships, and freelance web projects.</p>
+        <div class="cta reveal">
+          <h2>Have a project or a role in mind?</h2>
+          <p>I'm open to full-time roles, internships, and freelance web projects. Let's build something useful together.</p>
+          <div class="cta-actions">
+            <a href="https://www.linkedin.com/in/rakesh-kc-671b96307/" target="_blank" rel="noopener" class="btn btn-light"><i class="bi bi-linkedin"></i> Message me on LinkedIn</a>
+            <a href="https://github.com/Rakesh-KC-Tech" target="_blank" rel="noopener" class="btn btn-outline"><i class="bi bi-github"></i> See my GitHub</a>
+          </div>
         </div>
 
         <div class="contact-grid reveal">
