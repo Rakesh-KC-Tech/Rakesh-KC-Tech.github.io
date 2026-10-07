@@ -80,7 +80,7 @@
 <pre><code><span class="k">const</span> <span class="v">rakesh</span> = {
   <span class="p">role</span>: <span class="s">"Full-Stack Web Developer"</span>,
   <span class="p">based</span>: <span class="s">"Dallas–Fort Worth, TX"</span>,
-  <span class="p">stack</span>: [<span class="s">"Next.js"</span>, <span class="s">"TypeScript"</span>, <span class="s">"Supabase"</span>, <span class="s">"PostgreSQL"</span>],
+  <span class="p">stack</span>: [<span class="s">"Next.js 16"</span>, <span class="s">"TypeScript"</span>, <span class="s">"Supabase"</span>, <span class="s">"PostgreSQL"</span>],
   <span class="p">shipped</span>: [<span class="s">"irvingnepalfc.com"</span>, <span class="s">"member portal"</span>],
   <span class="p">focus</span>: <span class="s">"secure, real-world web apps"</span>,
   <span class="p">learning</span>: <span class="s">"application security"</span>,
@@ -127,9 +127,10 @@
               security designed in from the start.
             </p>
             <p>
-              Right now I'm building the complete digital presence for Irving Nepal FC: a public club website
-              and a member portal with sign-in, membership management, and a role-based admin dashboard.
-              Alongside development, I'm learning ethical hacking and application security.
+              Right now I'm building the complete digital platform for Irving Nepal FC: a public club website,
+              a member portal with payments and a role-based admin dashboard, and automation that turns live
+              match data and videos into news. I like owning a product end to end, from the database schema
+              to the last pixel, and I'm learning ethical hacking and application security along the way.
             </p>
 
             <div class="info-grid">
@@ -196,7 +197,7 @@
           <div class="skill-card spot reveal">
             <div class="skill-icon"><i class="bi bi-database"></i></div>
             <h4>Backend &amp; Data</h4>
-            <ul class="tags"><li>Supabase</li><li>PostgreSQL</li><li>SQL</li><li>REST APIs</li><li>Stripe payments</li><li>Webhooks</li><li>Authentication</li></ul>
+            <ul class="tags"><li>Supabase</li><li>PostgreSQL</li><li>SQL</li><li>REST APIs</li><li>Stripe payments</li><li>Webhooks</li><li>Authentication</li><li>Cron jobs</li></ul>
           </div>
           <div class="skill-card spot reveal">
             <div class="skill-icon"><i class="bi bi-shield-lock"></i></div>
@@ -206,7 +207,7 @@
           <div class="skill-card spot reveal">
             <div class="skill-icon"><i class="bi bi-git"></i></div>
             <h4>Tools &amp; Deployment</h4>
-            <ul class="tags"><li>Git</li><li>GitHub</li><li>Vercel</li><li>GitHub Pages</li><li>VS Code</li></ul>
+            <ul class="tags"><li>Git</li><li>GitHub</li><li>Vercel</li><li>IONOS</li><li>GitHub Pages</li><li>VS Code</li><li>Claude API</li><li>YouTube Data API</li></ul>
           </div>
         </div>
       </div>
@@ -259,7 +260,8 @@
                 <li>Built member sign-up, membership plans, and Stripe-powered payments for dues and the club shop.</li>
                 <li>Created a role-based admin dashboard for members, teams, events, documents, news, and audit logs.</li>
                 <li>Secured member data with PostgreSQL Row Level Security; integrated the Clubverse and YouTube APIs and a daily automated news sync.</li>
-                <li>Stack: Next.js 15, TypeScript, Supabase, PostgreSQL, Stripe; deployed on Vercel and IONOS.</li>
+                <li>Built an AI-assisted newsroom (Claude API) that drafts articles from YouTube uploads and match results for human review.</li>
+                <li>Shipped 105+ commits and 15 database migrations in one month; deployed on Vercel and IONOS.</li>
               </ul>
             </div>
           </div>
@@ -272,18 +274,18 @@
       <div class="container">
         <div class="section-title reveal">
           <h2>Projects</h2>
-          <p>Things I've designed and built.</p>
+          <p>Real software, in production, used by a real community.</p>
         </div>
 
         <article class="featured reveal">
           <div class="featured-main">
             <span class="badge">Case study · Freelance</span>
-            <h3>Irving Nepal FC: Club Website &amp; Member Portal</h3>
+            <h3>Irving Nepal FC: A Complete Club Platform</h3>
             <div class="case">
               <div><h4><i class="bi bi-flag"></i> The challenge</h4><p>A growing community soccer club needed one place to handle player registration, payments, news, and member information.</p></div>
-              <div><h4><i class="bi bi-hammer"></i> What I built</h4><p>A public website for fans and new players, plus a secure member portal where officials run the whole club from one dashboard.</p></div>
+              <div><h4><i class="bi bi-hammer"></i> What I built</h4><p>A public club website, a secure member portal, and the automation behind them: payments, live match data, and an AI-assisted newsroom.</p></div>
             </div>
-            <ul class="tags small"><li>Next.js 15</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Stripe</li><li>Vercel</li></ul>
+            <ul class="tags small"><li>Next.js 16</li><li>React 19</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Stripe</li><li>Claude API</li><li>Vercel</li></ul>
             <div class="featured-links">
               <a href="https://irvingnepalfc.com" target="_blank" rel="noopener" class="btn btn-primary">Club website <i class="bi bi-arrow-up-right"></i></a>
               <a href="https://portal.irvingnepalfc.com" target="_blank" rel="noopener" class="btn btn-ghost">Member portal <i class="bi bi-box-arrow-up-right"></i></a>
@@ -291,7 +293,7 @@
           </div>
           <div class="featured-visual" aria-hidden="true">
             <div class="mock">
-              <div class="mock-bar"><span></span><span></span><span></span><em>irvingnepalfc.com</em></div>
+              <div class="mock-bar"><span></span><span></span><span></span><em>portal.irvingnepalfc.com</em></div>
               <div class="mock-body">
                 <div class="mock-side"><i></i><i></i><i></i><i></i></div>
                 <div class="mock-main">
@@ -305,40 +307,161 @@
         </article>
 
         <div class="impact reveal">
+          <div><strong><span class="count" data-to="105">105</span>+</strong><span>Commits shipped</span></div>
+          <div><strong><span class="count" data-to="15">15</span></strong><span>Database migrations</span></div>
           <div><strong><span class="count" data-to="56">56</span>+</strong><span>Registered players</span></div>
-          <div><strong><span class="count" data-to="10">10</span></strong><span>Admin modules</span></div>
-          <div><strong><span class="count" data-to="3">3</span></strong><span>API integrations</span></div>
-          <div><strong>Daily</strong><span>Automated news sync</span></div>
+          <div><strong><span class="count" data-to="4">4</span></strong><span>API integrations</span></div>
         </div>
 
-        <div class="feature-grid reveal">
-          <div class="feature spot"><i class="bi bi-person-check"></i><h4>Member accounts</h4><p>Sign-up, login, profiles, and registrations.</p></div>
-          <div class="feature spot"><i class="bi bi-credit-card"></i><h4>Stripe payments</h4><p>Membership plans and club shop checkout with webhooks.</p></div>
-          <div class="feature spot"><i class="bi bi-speedometer2"></i><h4>Admin dashboard</h4><p>Members, teams, events, plans, and payments in one place.</p></div>
-          <div class="feature spot"><i class="bi bi-shield-lock"></i><h4>Row Level Security</h4><p>Database rules so members only see their own data.</p></div>
-          <div class="feature spot"><i class="bi bi-journal-text"></i><h4>Audit logs</h4><p>A record of admin actions for accountability.</p></div>
-          <div class="feature spot"><i class="bi bi-newspaper"></i><h4>News &amp; announcements</h4><p>Articles, announcements, and a scheduled daily sync.</p></div>
-          <div class="feature spot"><i class="bi bi-calendar-event"></i><h4>Events &amp; documents</h4><p>Event pages and a shared document library.</p></div>
-          <div class="feature spot"><i class="bi bi-plug"></i><h4>Integrations</h4><p>Clubverse games, rosters, and tournaments; YouTube videos.</p></div>
+        <!-- Project grid with filters -->
+        <div class="filters reveal no-print" role="tablist" aria-label="Filter projects">
+          <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter" data-filter="fullstack" role="tab" aria-selected="false">Full-stack</button>
+          <button class="filter" data-filter="automation" role="tab" aria-selected="false">Automation &amp; AI</button>
+          <button class="filter" data-filter="frontend" role="tab" aria-selected="false">Frontend</button>
         </div>
 
-        <h3 class="more-title reveal">More projects</h3>
-        <div class="projects-grid two no-print">
-          <article class="project spot reveal">
-            <div class="project-icon"><i class="bi bi-trophy"></i></div>
-            <h3>Irving Nepal FC Club Website</h3>
-            <p>Static public site introducing the club, its team, and fixtures, and helping new players and fans get involved.</p>
-            <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-            <a href="https://github.com/Rakesh-KC-Tech/irving-nepal-fc-website" target="_blank" rel="noopener" class="project-link">View code <i class="bi bi-arrow-up-right"></i></a>
+        <div class="project-list">
+          <article class="pcard spot reveal" data-cat="fullstack">
+            <div class="pcard-head">
+              <div class="pcard-icon"><i class="bi bi-person-badge"></i></div>
+              <span class="pcard-cat">Full-stack</span>
+            </div>
+            <h3>Member Portal</h3>
+            <p>The club's private back office: members sign up, get approved, pay dues, and manage their profile while officials run teams, events, and payments.</p>
+            <details>
+              <summary>Key details</summary>
+              <ul class="checks">
+                <li>Approval workflow (pending → approved → suspended) gates access by member status</li>
+                <li>Digital membership card with member number and "member since" year</li>
+                <li>Teams, matches and training sessions with RSVP, attendance, and stats</li>
+                <li>Membership plans, renewals, expiration, documents, and announcements</li>
+                <li>Admin dashboard with audit logs of every admin action</li>
+                <li>15 versioned PostgreSQL migrations with Row Level Security policies</li>
+              </ul>
+            </details>
+            <ul class="tags small"><li>Next.js 16</li><li>Supabase Auth</li><li>PostgreSQL</li><li>RLS</li><li>Tailwind</li></ul>
+            <a class="project-link" href="https://portal.irvingnepalfc.com" target="_blank" rel="noopener">Open portal <i class="bi bi-arrow-up-right"></i></a>
           </article>
-          <article class="project spot reveal">
-            <div class="project-icon"><i class="bi bi-person-workspace"></i></div>
-            <h3>Personal Portfolio</h3>
-            <p>This site: an accessible, responsive resume with light and dark themes and a printable CV, hosted on GitHub Pages.</p>
-            <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-            <a href="https://github.com/Rakesh-KC-Tech/Rakesh-KC-Tech.github.io" target="_blank" rel="noopener" class="project-link">View code <i class="bi bi-arrow-up-right"></i></a>
+
+          <article class="pcard spot reveal" data-cat="automation">
+            <div class="pcard-head">
+              <div class="pcard-icon"><i class="bi bi-stars"></i></div>
+              <span class="pcard-cat">Automation &amp; AI</span>
+            </div>
+            <h3>AI-Assisted Newsroom</h3>
+            <p>A daily pipeline that turns the club's YouTube uploads and match results into polished news drafts, so volunteers don't have to write every update by hand.</p>
+            <details>
+              <summary>Key details</summary>
+              <ul class="checks">
+                <li>Vercel Cron job secured with a bearer secret runs the sync every day</li>
+                <li>Claude API rewrites posts into articles under strict "never invent scores, quotes, or dates" rules</li>
+                <li>Relevance filter skips memes and off-topic posts automatically</li>
+                <li>Deduplication log so nothing is processed twice</li>
+                <li>Everything lands as a draft: a human reviews before anything is published</li>
+                <li>Uses YouTube's uploads playlist instead of search to save API quota</li>
+              </ul>
+            </details>
+            <ul class="tags small"><li>Claude API</li><li>YouTube Data API</li><li>Vercel Cron</li><li>Supabase</li></ul>
+            <a class="project-link" href="https://irvingnepalfc.com" target="_blank" rel="noopener">See the news <i class="bi bi-arrow-up-right"></i></a>
+          </article>
+
+          <article class="pcard spot reveal" data-cat="automation">
+            <div class="pcard-head">
+              <div class="pcard-icon"><i class="bi bi-image"></i></div>
+              <span class="pcard-cat">Automation</span>
+            </div>
+            <h3>Auto-Generated Match Graphics</h3>
+            <p>Every completed match gets a branded final-score graphic and a match report built only from official tournament data.</p>
+            <details>
+              <summary>Key details</summary>
+              <ul class="checks">
+                <li>Server-side image rendering with sharp: both crests, score, and a colored WIN / DRAW / LOSS badge</li>
+                <li>Real opponent logos where available, and a clean monogram badge otherwise, never a fake logo</li>
+                <li>Match reports drafted from ClubVerse results with no inferred facts</li>
+                <li>Graphics stored in Supabase Storage and linked from each article</li>
+              </ul>
+            </details>
+            <ul class="tags small"><li>Node.js</li><li>sharp</li><li>SVG</li><li>Supabase Storage</li></ul>
+            <a class="project-link" href="https://irvingnepalfc.com" target="_blank" rel="noopener">View match updates <i class="bi bi-arrow-up-right"></i></a>
+          </article>
+
+          <article class="pcard spot reveal" data-cat="fullstack">
+            <div class="pcard-head">
+              <div class="pcard-icon"><i class="bi bi-credit-card-2-front"></i></div>
+              <span class="pcard-cat">Full-stack</span>
+            </div>
+            <h3>Registration &amp; Payments</h3>
+            <p>An end-to-end "Join the Club" flow, from the public sign-up form to payment, invoice, and a real portal account.</p>
+            <details>
+              <summary>Key details</summary>
+              <ul class="checks">
+                <li>Join form saves registrations through a Next.js API route</li>
+                <li>Redirects to Stripe Checkout to collect the membership fee</li>
+                <li>Automatically issues a Stripe Invoice for every paid registration</li>
+                <li>Webhooks keep payment status in sync with the database</li>
+                <li>Admins convert a paid registration into a portal account in one click</li>
+                <li>Club shop checkout built on the same Stripe backend</li>
+              </ul>
+            </details>
+            <ul class="tags small"><li>Stripe Checkout</li><li>Webhooks</li><li>Invoices</li><li>Next.js API routes</li></ul>
+            <a class="project-link" href="https://irvingnepalfc.com" target="_blank" rel="noopener">Try the flow <i class="bi bi-arrow-up-right"></i></a>
+          </article>
+
+          <article class="pcard spot reveal" data-cat="frontend">
+            <div class="pcard-head">
+              <div class="pcard-icon"><i class="bi bi-trophy"></i></div>
+              <span class="pcard-cat">Frontend</span>
+            </div>
+            <h3>irvingnepalfc.com Club Website</h3>
+            <p>The club's public home: a fast, animated site powered by live data from the ClubVerse Partner API.</p>
+            <details>
+              <summary>Key details</summary>
+              <ul class="checks">
+                <li>Live results, fixtures, standings, and rosters with player photos from ClubVerse</li>
+                <li>Match center and continuous calendar inspired by top club sites</li>
+                <li>Crest-evolution crossfade with a synthesized audio chime and mute control</li>
+                <li>SEO pass with JSON-LD and sitemap; removed ~940 KB of inlined images</li>
+                <li>Gallery lightbox, embedded map, sponsor marquee, and mobile-first fixes</li>
+                <li>Policy of real data only: placeholder and invented stats removed site-wide</li>
+              </ul>
+            </details>
+            <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>ClubVerse API</li><li>SEO</li></ul>
+            <a class="project-link" href="https://irvingnepalfc.com" target="_blank" rel="noopener">Visit site <i class="bi bi-arrow-up-right"></i></a>
+          </article>
+
+          <article class="pcard spot reveal" data-cat="frontend">
+            <div class="pcard-head">
+              <div class="pcard-icon"><i class="bi bi-person-workspace"></i></div>
+              <span class="pcard-cat">Frontend</span>
+            </div>
+            <h3>This Portfolio</h3>
+            <p>A fast, dependency-free portfolio with a printable CV, built and shipped on GitHub Pages.</p>
+            <details>
+              <summary>Key details</summary>
+              <ul class="checks">
+                <li>Light and dark themes that remember your choice</li>
+                <li>Print stylesheet turns the page into a clean two-page resume</li>
+                <li>Scroll-triggered animations that respect "reduce motion" settings</li>
+                <li>Open Graph tags for rich link previews on LinkedIn</li>
+              </ul>
+            </details>
+            <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
+            <a class="project-link" href="https://github.com/Rakesh-KC-Tech/Rakesh-KC-Tech.github.io" target="_blank" rel="noopener">View code <i class="bi bi-arrow-up-right"></i></a>
           </article>
         </div>
+
+        <!-- Build timeline -->
+        <h3 class="more-title reveal">How the platform came together</h3>
+        <ol class="build reveal no-print">
+          <li><time>Sep 4</time><h4>Foundation</h4><p>Next.js + Supabase scaffold, auth, and the first database migration.</p></li>
+          <li><time>Sep 6</time><h4>Club operations</h4><p>Teams, RSVP, membership plans, Stripe payments, and the admin dashboard.</p></li>
+          <li><time>Sep 18</time><h4>Website &amp; newsroom</h4><p>irvingnepalfc.com launches alongside the news CMS and YouTube ingestion.</p></li>
+          <li><time>Sep 19</time><h4>Live match data</h4><p>ClubVerse Partner API powers results, fixtures, rosters, and auto match reports.</p></li>
+          <li><time>Sep 23</time><h4>Paid registration</h4><p>Join form, Stripe Checkout, automatic invoices, and account conversion.</p></li>
+          <li><time>Sep 24</time><h4>Brand &amp; graphics</h4><p>New crest launch, match center redesign, and auto-generated score graphics.</p></li>
+          <li><time>Sep 26 – Oct 3</time><h4>Engagement</h4><p>SEO, contact form, newsletter signup, and an admin Messages inbox.</p></li>
+        </ol>
       </div>
     </section>
 

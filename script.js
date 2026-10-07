@@ -108,4 +108,20 @@ const countObserver = new IntersectionObserver(
 );
 document.querySelectorAll(".count").forEach((el) => countObserver.observe(el));
 
+// Project filters
+const filters = document.querySelectorAll(".filter");
+filters.forEach((btn) =>
+  btn.addEventListener("click", () => {
+    filters.forEach((b) => {
+      b.classList.toggle("active", b === btn);
+      b.setAttribute("aria-selected", b === btn);
+    });
+    document.querySelectorAll(".pcard").forEach((card) => {
+      const show = btn.dataset.filter === "all" || card.dataset.cat === btn.dataset.filter;
+      card.classList.toggle("is-hidden", !show);
+      if (show) card.classList.add("visible");
+    });
+  })
+);
+
 document.getElementById("year").textContent = new Date().getFullYear();
